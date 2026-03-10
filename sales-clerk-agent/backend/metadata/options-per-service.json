@@ -1,0 +1,11 @@
+{
+  "CE_SALESORDER_0001": {
+    "directoryName": "ce-salesorder-0001",
+    "packageName": "ce-salesorder-0001"
+  },
+  "metadata/CE_SALESORDER_0001.edmx": {
+    "packageName": "ce_salesorder_0001",
+    "directoryName": "CE_SALESORDER_0001",
+    "basePath": "/"
+  }
+}

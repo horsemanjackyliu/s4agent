@@ -1,0 +1,32 @@
+{
+    "name": "sales-clerk-agent-backend",
+    "version": "1.0.0",
+    "description": "Sales Clerk Agent backend — LangGraph + SAP AI Core + S/4HANA OData",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "tsx src/server.ts",
+        "generate": "npx generate-odata-client --input metadata --outputDir src/services --optionsPerService metadata/options-per-service.json --overwrite --skipValidation"
+    },
+    "dependencies": {
+        "@langchain/core": "^0.3.0",
+        "@langchain/langgraph": "^0.2.0",
+        "@sap-ai-sdk/langchain": "^1.7.0",
+        "@sap-cloud-sdk/connectivity": "^4.5.1",
+        "@sap-cloud-sdk/odata-v4": "^4.5.1",
+        "@sap/xsenv": "^6.1.0",
+        "@sap/xssec": "^4.12.2",
+        "cors": "^2.8.5",
+        "express": "^5.2.1",
+        "zod": "^4.3.6"
+    },
+    "devDependencies": {
+        "@sap-cloud-sdk/generator": "^4.5.1",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.0.0",
+        "tsx": "^4.19.0",
+        "typescript": "^5.7.0"
+    }
+}

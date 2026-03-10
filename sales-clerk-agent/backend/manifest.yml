@@ -1,0 +1,18 @@
+applications:
+  - name: sales-clerk-agent-backend
+    memory: 512M
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    command: node dist/server.js
+    health-check-type: http
+    health-check-http-endpoint: /health
+    env:
+      NODE_ENV: production
+      S4_DESTINATION_NAME: s4hc_fusiondev_product_api
+      AICORE_DESTINATION_NAME: aicore-service-apps
+      AICORE_RESOURCE_GROUP: default-grounding
+      SAP_CLOUD_SDK_LOG_LEVEL: trace
+    services:
+      - xsuaa-sales-clerk
+      - destination-sales-clerk

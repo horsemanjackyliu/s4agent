@@ -1,0 +1,78 @@
+/* AI message bubble */
+.salesClerkAssistantMessage {
+    background-color: #f5f7fb;
+    border-left: 3px solid #0070f2;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 4px 0;
+}
+
+/* Sender label + timestamp */
+.salesClerkAILabel {
+    font-size: 0.75rem;
+    color: #6a7587;
+    margin-bottom: 6px;
+}
+
+/* FormattedText host element */
+.salesClerkAIText {
+    width: 100%;
+}
+
+/* Paragraphs inside AI response */
+.salesClerkAIText p {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+/* Tables */
+.salesClerkAIText table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 0.875rem;
+}
+
+.salesClerkAIText th {
+    background-color: #0070f2;
+    color: #ffffff;
+    text-align: left;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+.salesClerkAIText td {
+    border-bottom: 1px solid #e0e5ee;
+    padding: 6px 10px;
+}
+
+.salesClerkAIText tr:nth-child(even) td {
+    background-color: #eef2fa;
+}
+
+/* Lists */
+.salesClerkAIText ul {
+    margin: 4px 0 4px 20px;
+    padding: 0;
+}
+
+.salesClerkAIText li {
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+/* Inline code */
+.salesClerkAIText code {
+    background-color: #eef2fa;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-family: monospace;
+    font-size: 0.85em;
+}
+
+/* User message */
+.salesClerkUserMessage {
+    background-color: #e8f0fe;
+    border-radius: 6px;
+    margin: 4px 0;
+}

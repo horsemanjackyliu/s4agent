@@ -1,0 +1,14 @@
+applications:
+  - name: sales-clerk-agent-frontend
+    memory: 128M
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    path: .
+    env:
+      NODE_ENV: production
+      destinations: >
+        [{"name":"sales-clerk-backend","url":"https://sales-clerk-agent-backend.cfapps.ap10.hana.ondemand.com","forwardAuthToken":true},{"name":"ui5","url":"https://ui5.sap.com","forwardAuthToken":false}]
+    services:
+      - xsuaa-sales-clerk
+      - destination-sales-clerk

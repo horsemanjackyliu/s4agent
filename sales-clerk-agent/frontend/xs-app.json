@@ -1,0 +1,32 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/1.145.0/resources/$1",
+      "destination": "ui5",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/1.145.0/test-resources/$1",
+      "destination": "ui5",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/chat$",
+      "target": "/chat",
+      "destination": "sales-clerk-backend",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "localDir": "dist",
+      "authenticationType": "xsuaa",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    }
+  ]
+}

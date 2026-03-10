@@ -1,0 +1,54 @@
+<mvc:View
+	controllerName="com.sap.salesclerkai.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	height="100%">
+
+	<Page
+		id="page"
+		title="Sales Clerk AI Assistant"
+		enableScrolling="false">
+		<content>
+			<VBox
+				height="100%"
+				class="sapUiSmallMargin"
+				displayInline="false">
+				<items>
+					<ScrollContainer
+						id="chatScrollContainer"
+						height="100%"
+						width="100%"
+						vertical="true"
+						horizontal="false">
+						<content>
+							<List
+								id="chatList"
+								showSeparators="None"
+								width="100%">
+							</List>
+						</content>
+					</ScrollContainer>
+				</items>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<Input
+					id="messageInput"
+					placeholder="Ask about sales orders..."
+					width="100%"
+					submit=".onSend" />
+				<ToolbarSpacer width="8px" />
+				<Button
+					id="sendButton"
+					text="Send"
+					type="Emphasized"
+					press=".onSend"
+					enabled="{/sendEnabled}" />
+			</Toolbar>
+		</footer>
+	</Page>
+
+</mvc:View>
